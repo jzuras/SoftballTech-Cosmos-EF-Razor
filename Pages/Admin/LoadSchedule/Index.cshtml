@@ -1,0 +1,43 @@
+﻿@page "{organization}"
+
+@model Sbt.Pages.Admin.LoadSchedule.LoadScheduleModel
+
+@{
+    ViewData["Title"] = "Admin - Load Schedule";
+}
+
+<h1>Load Schedule</h1>
+<h4>Organization: @Html.Raw(Model.Organization)</h4>
+<hr />
+
+<h5>Choose Division and File </h5>
+<p />
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div><div></div><div></div>
+            <div class="grid-container-load-schedule">
+                <label asp-for="DivisionID" class="" aria-label="Division ID" >Division ID</label>
+                <input asp-for="DivisionID" class="" aria-required="true" />
+                <span asp-validation-for="DivisionID" class="text-danger"></span>
+                <label asp-for="UsesDoubleHeaders" class="l" aria-label="Uses DoubleHeaders">Uses Double-headers</label>
+                <input class="form-check-input" asp-for="UsesDoubleHeaders" class="" />
+                <span asp-validation-for="UsesDoubleHeaders" class="text-danger" ></span>
+                <label asp-for="ScheduleFile" class="" aria-label="Schedule File"></label>
+                <input type="file" asp-for="ScheduleFile" class="" aria-required="true" />
+                <span asp-validation-for="ScheduleFile" class="text-danger" ></span>
+                <input type="submit" value="Process Schedule File" class="btn btn-primary" @((Model.DisableSubmitButton) ? "disabled" : "") />
+            </div>
+        </form>
+        <p/>
+<p></p>
+@if (!string.IsNullOrEmpty(Model.Result))
+{
+    <div class="alert alert-primary">@Html.Raw(Model.Result)</div>
+}
+
+<div>
+    <a asp-page="/Admin/Index" asp-route-organization="@Model.Organization">Back to Admin</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
