@@ -12,4 +12,4 @@ On the other hand, the EF Core code is much simpler than the prior version (or m
 
 As with the others, this version is running on Azure, and can be found [here](https://sbt-cosmos-ef.azurewebsites.net/).
 
-The LinkedIn discussion post is [coming soon]().
+The LinkedIn discussion post is [here](https://www.linkedin.com/feed/update/urn:li:activity:7134971126622957568/).
