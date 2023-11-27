@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Sbt-Cosmos-EF'
           slot-name: 'Production'
-          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CEF3EA0352A44C0FBC9756F9B8D188E3 }}
+          package: .
