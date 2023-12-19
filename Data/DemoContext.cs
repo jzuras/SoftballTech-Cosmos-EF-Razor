@@ -34,6 +34,9 @@ namespace Sbt.Data
 
             modelBuilder.Entity<DivisionInfoList>().HasPartitionKey(d => d.Organization);
             modelBuilder.Entity<Division>().HasPartitionKey(d => d.Organization);
+
+            modelBuilder.Entity<Division>().HasDiscriminator<string>("DivisionUsedWithDivisionList");
+
         }
 
         #region Data Access Layer Methods
