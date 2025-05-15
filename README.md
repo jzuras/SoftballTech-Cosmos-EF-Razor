@@ -10,6 +10,6 @@ The biggest hurdle I faced was thinking that EF Core could read the data written
 
 On the other hand, the EF Core code is much simpler than the prior version (or maybe I didn't know how to write simple code using that SDK).
 
-As with the others, this version is running on Azure, and can be found [here](https://sbt-cosmos-ef.azurewebsites.net/).
+As with the others, this version is running on Azure; contact me via LinkedIn for more info.
 
 The LinkedIn discussion post is [here](https://www.linkedin.com/feed/update/urn:li:activity:7134971126622957568/).
